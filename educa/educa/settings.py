@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # lcoal but before admin
+    "courses.apps.CoursesConfig",
+    # build in
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -38,7 +41,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # local
-    "courses.apps.CoursesConfig",
 ]
 
 MIDDLEWARE = [
