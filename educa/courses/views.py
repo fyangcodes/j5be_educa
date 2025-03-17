@@ -11,16 +11,16 @@ class OwnerMixin:
         return qs.filter(owner=self.request.user)
 
 
-class OwnerEditMixin:
-    def form_valid(self, form):
-        form.instance.owner = self.request.user
-        return super().form_valid(form)
-
-
 class OwnerCourseMixin(OwnerMixin):
     model = Course
     fields = ["subject", "title", "slug", "overview"]
     success_url = reverse_lazy("manage_course_list")
+
+
+class OwnerEditMixin:
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super().form_valid(form)
 
 
 class OwnerCourseEditMixin(OwnerCourseMixin, OwnerEditMixin):
