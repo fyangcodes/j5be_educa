@@ -29,6 +29,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("course/", include("courses.urls")),
     path("", CourseListView.as_view(), name="course_list"),
+    path("students/", include("students.urls")),
+    path("students/", include("students.urls")),
+    path("", CourseListView.as_view(), name="course_list"),
 ]
 
 if settings.DEBUG:
