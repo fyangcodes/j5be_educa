@@ -11,3 +11,4 @@ class CourseEnrollForm(forms.Form):
     def __init__(self, form):
         super(CourseEnrollForm, self).__init__(*args, **kwargs)
         self.fields["course"].queryset = Course.objects.all()
+
