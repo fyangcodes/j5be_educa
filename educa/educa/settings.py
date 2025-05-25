@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "rest_framework",
     # local
     "students.apps.StudentsConfig",
+    "chat.apps.ChatConfig",
 ]
 
 MIDDLEWARE = [
