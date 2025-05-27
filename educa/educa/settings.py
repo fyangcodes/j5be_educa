@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # asynchronous server
+    "daphne",
     # local but before admin
     "courses.apps.CoursesConfig",
     # build in
@@ -166,3 +168,6 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
     ]
 }
+
+# ASGI
+ASGI_APPLICATION = "educa.asgi.application"
